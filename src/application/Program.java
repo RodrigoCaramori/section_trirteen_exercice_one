@@ -30,7 +30,7 @@ public class Program {
 		double baseSalary = sc.nextDouble();
 		Worker worker = new Worker(workerName, WorkerLevel.valueOf(workerLevel), baseSalary, new Department(departmentName));
 		
-		System.out.println("How many contracts to this worker: ");
+		System.out.print("How many contracts to this worker? ");
 		int n = sc.nextInt();
 		
 		for (int i=1; i<=n; i++) {
@@ -51,7 +51,7 @@ public class Program {
 		int year = Integer.parseInt(monthAndYear.substring(3));
 		System.out.println("Name: " + worker.getName());
 		System.out.println("Department: " + worker.getDepartment().getName());
-		System.out.println("Income for " + monthAndYear + ": " + String.format("%.2f", worker.Income(year, month)));
+		System.out.println("Income for " + monthAndYear + ": US$" + String.format("%.2f", worker.Income(year, month)));
 		
 		sc.close();
 	}
